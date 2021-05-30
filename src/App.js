@@ -7,6 +7,7 @@ import {
 import './App.css';
 import Header from './Components/Home/Header';
 import Product from './Components/Product/Product/Product';
+import ProductDetails from './Components/Product/ProductDetails/ProductDetails';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
      <Router>
        <Header></Header>
        <Switch>
+         <Route path="/details/:serviceId">
+          <ProductDetails></ProductDetails>
+         </Route>
          <Route exact path="/">
            <Product></Product>
           </Route>
